@@ -10,17 +10,20 @@ namespace RectangleTest
         Rectangle rec = new Rectangle();
 
         [Test]
+        [TestCase(2,2)]
+        [TestCase(3,3)]
        
-        public void GetLengthTestMethod()
+        public void GetLengthTestMethod(int length, int expectedlength)
         {
             Rectangle rec = new Rectangle();
             int RectangleLength = rec.GetLength();
             NUnit.Framework.Assert.AreEqual(RectangleLength, 1);
 
         }
-        [Test]
-        [TestCase]
-        public void GetWidthTestMethod()
+       [Test]
+        [TestCase(4,4)]
+        [TestCase(5,5)]
+        public void GetWidthTestMethod(int width, int expectedWidth)
         {
            Rectangle rec = new Rectangle();
             int RectangleWidth = rec.GetWidth();
